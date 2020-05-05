@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Customer management</title>
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style>
+    .jumbotron {
+    padding: 30px;
+    background-image: linear-gradient(45deg,rgb(22, 62, 136),rgb(0, 170, 248));
+  }
+  .button_size{
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.397);
+    font-size: 12px;
+    height: 30px;
+    width: 110px;
+    border: none;
+    border-radius: 3px;
+    padding: 2px;
+    
+}
+.background_color{
+        background-image: linear-gradient(45deg,rgb(3, 74, 121),rgb(0, 170, 248));
+        
+}
+</style>
+</head>
+<body>
+    <div class="jumbotron">
+        <div class="container text-center">
+          <h1>Coustomer Management</h1>
+          </div>
+    </div>
+
+    <div class="container-fluid">
+<!-- row 1 start -->
+        <div class="row">
+<!-- search bar -->
+            <div class="col-md-4">
+                
+            </div>
+<!-- import and export buttons -->
+            <div class="col-md-8 text-center">
+                <nav class="navbar navbar-light bg-light">
+                    <form class="form-inline">
+                      <div class="input-group">
+                        <div class="input-group-prepend">
+                            <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">                
+                        </div>
+                        <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
+                      </div>
+                    </form>
+                <button class="mt-3 mb-0 mx-3  button_size background_color text-white">Import From Excel</button>
+                <button class="mt-3 mb-0 mx-3  button_size background_color text-white">Export To Excel</button>
+                <button class="mt-3 mb-0 mx-3  button_size background_color text-white">Export To PDF</button>
+                  </nav>
+            </div>
+        </div>
+<!-- row 1 end -->
+<!-- row 2 start -->
+        <div class="row" id="mainRow">
+<!--form start-->
+            <div class="col-sm-4 ml-4 mt-3">
+            <form>
+                <div class="form-group">
+                  <label for="Name">Name</label>
+                  <input type="email" class="form-control" id="Name" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                  <label for="mobile">Mobile</label>
+                  <input type="text" class="form-control" id="mobile">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email">
+                  </div>
+                  <div class="form-group">
+                    <label for="business">Business</label>
+                    <input type="text" class="form-control" id="business">
+                  </div>
+                  <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address">
+                  </div>
+              </form>
+              </div>
+<!-- form end -->  
+            <div class="col-md-7 ml-4 mt-3 p-0 shadow text-center">
+                    <table class="table table-hover" id="Table">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">Sr No</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Mobile</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Business</th>
+                            <th scope="col">Address</th>
+                          </tr>
+                        </thead>
+                    <tbody id="tableBody">
+                
+                    </tbody>
+                </table>
+            </div>
+        </div>
+<!-- row 2 end -->
+<!-- row 3 start -->
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-8 text-center">
+                <button class="m-2 button_size background_color text-white" onclick="add()">Add</button>
+                <button class="m-2 button_size background_color text-white" onclick="updateRow()">Update</button class="m-3">
+                <button class="m-2 button_size background_color text-white" onclick="deleteRow()">Delete</button class="m-3">
+                <button class="m-2 button_size background_color text-white" onclick="resetTable()">Reset</button class="m-3">
+            </div>
+        </div>
+<!-- row 3 end -->
+    </div>
+
+
+<!-- scripts -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="./ryd.js"></script>
+<script src="https://kit.fontawesome.com/0c07655130.js" crossorigin="anonymous"></script>
+</body>
+</html>

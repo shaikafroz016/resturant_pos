@@ -1,0 +1,92 @@
+.header{
+    height: 50px;
+    
+}
+
+.background_color{
+        background-image: linear-gradient(45deg,rgb(3, 74, 121),rgb(0, 170, 248));
+        
+}
+.button_size{
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.397);
+    font-size: 12px;
+    height: 30px;
+    width: 110px;
+    border: none;
+    border-radius: 3px;
+    padding: 2px;
+    
+}
+.shadow{
+
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.397);
+}
+
+.form_entry{
+
+    width: 180px;
+    /* height: 30px; */
+    border: none;
+    border-radius: 1px;
+    background-color: rgba(216, 216, 216, 0.596);
+}
+#search{
+    border-radius: 3px;
+    height: 30px;
+}
+#search ::placeholder{
+    color: rgb(250, 250, 250);
+    font-size: 13px;
+    
+}
+::placeholder{
+    color: rgb(27, 27, 27);
+    font-size:13px ;
+}
+
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: red;
+  }
+  input:focus::placeholder {
+     
+    color: rgba(255, 0, 0, 0);
+}
+#table_row{
+    height: 400px;
+    overflow: scroll;
+}
+body{
+    padding-right: 20px;
+    margin: 0;
+}
+th{
+    font-size: 15px;
+    background-color: rgb(95, 95, 95);
+    color: rgba(255, 255, 255, 0.904);
+    position:sticky;
+    top:0
+}
+thead{
+    font-weight: normal;
+    font-size: large;
+}
+td{
+    font-size: 15px;
+}
+.css-serial {
+    counter-reset: serial-number;  /* Set the serial number counter to 0 */
+  }
+  
+  .css-serial td:first-child:before {
+    counter-increment: serial-number;  /* Increment the serial number counter */
+    content: counter(serial-number);  /* Display the counter */
+  }
+#mainRow{
+    height: 400px;
+    
+  }
